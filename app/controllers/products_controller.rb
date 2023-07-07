@@ -11,10 +11,10 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.create(
-      name: "kitten",
-      description: "a fluffy, standoffish pet",
-      price: 25,
-      image_url: "https://images.pexels.com/photos/1444321/pexels-photo-1444321.jpeg?cs=srgb&dl=pexels-cats-coming-1444321.jpg&fm=jpg",
+      name: params[:name],
+      description: params[:description],
+      price: params[:price],
+      image_url: params[:image_url],
     )
 
     render json: product.as_json

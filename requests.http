@@ -1,2 +1,13 @@
 POST http://localhost:3000/products.json
 Content-Type: application/json
+
+###
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "kitten",
+  "description": "a fluffy, sometimes standoffish pet",
+  "price": 25,
+  "image_url": "https://media.istockphoto.com/id/91626487/photo/funny-kitten.jpg?s=612x612&w=0&k=20&c=9Ftu_rNQpfWhYkmQzvC2x_-yGKhoJmzUBemM4AlaWYw=" 
+}
