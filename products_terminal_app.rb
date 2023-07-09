@@ -2,8 +2,8 @@ require "http"
 
 system "clear"
 
-puts "Here's the secret place to view all the products... : )"
+puts "Here's the secret place to use the app : )"
 
-products = HTTP.get("http://localhost:3000/all_products")
+products = HTTP.get("http://localhost:3000/products")
 
 pp products.parse
