@@ -11,3 +11,11 @@ Content-Type: application/json
   "price": 25,
   "image_url": "https://media.istockphoto.com/id/91626487/photo/funny-kitten.jpg?s=612x612&w=0&k=20&c=9Ftu_rNQpfWhYkmQzvC2x_-yGKhoJmzUBemM4AlaWYw=" 
 }
+
+###
+PATCH http://localhost:3000/products/1.json
+Content-Type: application/json
+
+{
+  "price": 15
+}
