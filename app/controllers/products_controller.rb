@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product = @Product.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
     @product.update(
       name: params[:name] || @product.name,
       description: params[:description] || @product.description,
