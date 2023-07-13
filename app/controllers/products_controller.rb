@@ -17,7 +17,13 @@ class ProductsController < ApplicationController
       image_url: params[:image_url],
     )
 
-    render template: "products/show"
+    # happy path -> data saved with no validation errors
+    if @product.valid?
+      render template: "products/show"
+    else
+      # sad path -> validations did not pass
+      render json: { errors: @product.errors.full_messages }, status: 422
+    end
   end
 
   def update
@@ -29,7 +35,13 @@ class ProductsController < ApplicationController
       image_url: params[:image_url] || @product.image_url,
     )
 
-    render template: "products/show"
+    if @product.valid?
+      # happy path
+      render template: "products/show"
+    else
+      # sad path -> validations did not pass
+      render json: { errors: @product.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
