@@ -33,8 +33,8 @@ Content-Type: application/json
 
 {
   "name": "Test",
-  "email": "iamanemail",
-  "phone_number": "123-321-4201"
+  "email": "iamanemail@test.com",
+  "phone_number": "123-321"
 }
 
 ###
