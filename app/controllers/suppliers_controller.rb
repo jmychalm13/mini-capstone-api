@@ -12,4 +12,9 @@ class SuppliersController < ApplicationController
     )
     render template: "suppliers/index"
   end
+
+  def show
+    @supplier = Supplier.find_by(id: params[:id])
+    render template: "suppliers/show"
+  end
 end

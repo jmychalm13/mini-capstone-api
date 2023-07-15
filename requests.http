@@ -36,3 +36,6 @@ Content-Type: application/json
   "email": "test@amazon.com",
   "phone_number": "123-321-4201"
 }
+
+###
+GET http://localhost:3000/suppliers/2.json
