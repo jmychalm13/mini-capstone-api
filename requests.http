@@ -32,7 +32,7 @@ POST http://localhost:3000/suppliers.json
 Content-Type: application/json
 
 {
-  "name": "Amazon",
+  "name": "Test",
   "email": "iamanemail",
   "phone_number": "123-321-4201"
 }
