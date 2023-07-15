@@ -21,6 +21,15 @@ class SuppliersControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["id", "name", "width", "height", "created_at", "updated_at"], data.keys
+    assert_equal ["id", "name", "phone_number", "email"], data.keys
+  end
+
+  test "update" do
+    supplier = Supplier.first
+    patch "/suppliers/#{supplier.id}.json", params: { name: "Updated name" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated name", data["name"]
   end
 end

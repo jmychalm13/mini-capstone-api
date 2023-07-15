@@ -39,3 +39,11 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/suppliers/2.json
+
+###
+PATCH http://localhost:3000/suppliers/2.json
+Content-Type: application/json
+
+{
+  "name": "test supplier"
+}

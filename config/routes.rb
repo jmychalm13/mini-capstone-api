@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   post "/suppliers" => "suppliers#create"
 
   get "/suppliers/:id" => "suppliers#show"
+
+  patch "/suppliers/:id" => "suppliers#update"
 end
