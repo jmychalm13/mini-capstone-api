@@ -5,12 +5,5 @@ class Supplier < ApplicationRecord
             length: { minimum: 4, maximum: 254 }
   validates :name, :email, :phone_number, presence: true
   validates :phone_number, length: { minimum: 10 }
-
-  def big_box
-    if @name == "Amazon"
-      return true
-    else
-      return false
-    end
-  end
+  validates :email, :name, :phone_number, uniqueness: true
 end

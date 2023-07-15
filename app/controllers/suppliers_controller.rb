@@ -10,7 +10,12 @@ class SuppliersController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
     )
-    render template: "suppliers/index"
+
+    if @supplier.valid?
+      render template: "suppliers/index"
+    else
+      render json: { message: "You have not entered a valid input" }, status: 422
+    end
   end
 
   def show
@@ -25,7 +30,12 @@ class SuppliersController < ApplicationController
       email: params[:email] || @supplier.email,
       phone_number: params[:phone_number] || @supplier.phone_number,
     )
-    render template: "suppliers/show"
+
+    if @supplier.valid?
+      render template: "suppliers/show"
+    else
+      render json: { message: "You have not entered a valid input." }, status: 422
+    end
   end
 
   def destroy
