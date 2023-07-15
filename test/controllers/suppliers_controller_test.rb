@@ -32,4 +32,11 @@ class SuppliersControllerTest < ActionDispatch::IntegrationTest
     data = JSON.parse(response.body)
     assert_equal "Updated name", data["name"]
   end
+
+  test "destroy" do
+    assert_difference "Supplier.count", -1 do
+      delete "/suppliers/#{Supplier.first.id}.json"
+      assert_response 200
+    end
+  end
 end

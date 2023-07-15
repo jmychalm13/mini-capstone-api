@@ -27,4 +27,11 @@ class SuppliersController < ApplicationController
     )
     render template: "suppliers/show"
   end
+
+  def destroy
+    @supplier = Supplier.find_by(id: params[:id])
+    @supplier.destroy
+
+    render json: { message: "Successfully DESTROYED!!!!" }
+  end
 end
