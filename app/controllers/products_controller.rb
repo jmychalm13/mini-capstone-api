@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
       name: params[:name],
       description: params[:description],
       price: params[:price],
-      image_url: params[:image_url],
+      supplier_id: params[:supplier_id],
     )
 
     # happy path -> data saved with no validation errors
@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
       name: params[:name] || @product.name,
       description: params[:description] || @product.description,
       price: params[:price] || @product.price,
-      image_url: params[:image_url] || @product.image_url,
+      supplier_id: params[:supplier_id] || @product.supplier_id,
     )
 
     if @product.valid?

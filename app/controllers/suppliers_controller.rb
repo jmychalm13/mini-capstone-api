@@ -14,7 +14,7 @@ class SuppliersController < ApplicationController
     if @supplier.valid?
       render template: "suppliers/index"
     else
-      render json: { message: "You have not entered a valid input" }, status: 422
+      render json: { errors: @supplier.errors.full_messages }, status: 422
     end
   end
 
@@ -34,7 +34,7 @@ class SuppliersController < ApplicationController
     if @supplier.valid?
       render template: "suppliers/show"
     else
-      render json: { message: "You have not entered a valid input." }, status: 422
+      render json: { errors: @supplier.errors.full_messages }, status: 422
     end
   end
 
