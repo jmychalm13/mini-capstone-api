@@ -80,14 +80,14 @@ POST http://localhost:3000/orders.json
 Content-Type: application/json
 
 {
-  "user_id": 1,
-  "product_id": 3,
-  "quantity": 3,
-  "subtotal": 12,
-  "tax": 2,
-  "total": 14
+  "user_id": 2,
+  "product_id": 7,
+  "quantity": 2,
+  "subtotal": 11,
+  "tax": 1,
+  "total": 12
 }
 
 ###
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders.json
 Content-Type: application/json
