@@ -81,12 +81,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODk4MjAwN
 Content-Type: application/json
 
 {
-  "user_id": 2,
   "product_id": 7,
-  "quantity": 2,
-  "subtotal": 11,
-  "tax": 1,
-  "total": 12
+  "quantity": 2
 }
 
 ###

@@ -1,12 +1,17 @@
 class OrdersController < ApplicationController
   def create
+    product = Product.find_by(id: params[:product_id])
+    # pp product.price
+    subtotal = params[:quantity] * product.price
+    tax = subtotal * 0.09
+    total = tax + subtotal
     @order = Order.create(
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      subtotal: params[:subtotal],
-      tax: params[:tax],
-      total: params[:total],
+      subtotal: subtotal,
+      tax: tax,
+      total: total,
     )
     if @order.valid?
       render template: "orders/show"
