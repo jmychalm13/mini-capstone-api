@@ -55,7 +55,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/suppliers/2.json
 Content-Type: application/json
 
-###
+### create
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
@@ -66,12 +66,12 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
-###
+### login
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jess@test.com",
+  "email": "jane@test.com",
   "password": "password"
 }
 
@@ -85,6 +85,10 @@ Content-Type: application/json
   "quantity": 2
 }
 
-###
+### index
 GET http://localhost:3000/orders.json
-Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2ODk4OTM5MjR9.2_4jh2noS24ceziDb8JS-Xu8vKViCOfexp0UZr2otPM
+
+###
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2ODk4OTM5MjR9.2_4jh2noS24ceziDb8JS-Xu8vKViCOfexp0UZr2otPM
