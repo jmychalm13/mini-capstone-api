@@ -1,5 +1,18 @@
-ActiveRecord::Schema[7.0].define(version: 2023_07_21_000320) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_21_014905) do
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_products", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.string "url"
