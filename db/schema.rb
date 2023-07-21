@@ -1,4 +1,4 @@
-ActiveRecord::Schema[7.0].define(version: 2023_07_19_003237) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_21_000320) do
   enable_extension "plpgsql"
 
   create_table "images", force: :cascade do |t|
@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_19_003237) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
 end
