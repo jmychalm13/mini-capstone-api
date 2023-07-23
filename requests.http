@@ -96,10 +96,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2ODk4OTM5M
 
 ###
 POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyMzMyMDJ9.qVctuVaFlk50QURHguICjpaSU9NCwpsEcIbYMX0SPJ8
 Content-Type: application/json
 
 {
-  "user_id": 1,
   "product_id": 5,
   "order_id": 2,
   "quantity": 10,
