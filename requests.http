@@ -100,7 +100,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyMzMyM
 Content-Type: application/json
 
 {
-  "product_id": 5,
-  "order_id": 2,
+  "product_id": 16,
   "quantity": 10
 }
+
+###
+GET http://localhost:3000/carted_products.json

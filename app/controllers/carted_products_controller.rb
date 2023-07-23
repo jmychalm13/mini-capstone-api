@@ -10,4 +10,10 @@ class CartedProductsController < ApplicationController
 
     render template: "carted_products/show"
   end
+
+  def index
+    @carted_products = CartedProduct.all
+
+    render template: "carted_products/index"
+  end
 end
