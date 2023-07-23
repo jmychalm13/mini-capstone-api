@@ -1,4 +1,4 @@
-ActiveRecord::Schema[7.0].define(version: 2023_07_23_193321) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_23_193655) do
   enable_extension "plpgsql"
 
   create_table "carted_products", force: :cascade do |t|
@@ -33,7 +33,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_193321) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "quantity"
     t.decimal "subtotal", precision: 9, scale: 2
     t.decimal "tax", precision: 9, scale: 2
     t.decimal "total", precision: 9, scale: 2
