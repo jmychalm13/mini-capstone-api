@@ -12,8 +12,7 @@ class CartedProductsController < ApplicationController
   end
 
   def index
-    @carted_products = CartedProduct.where(user_id: current_user.id)
-
+    @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
     render template: "carted_products/index"
   end
 end
