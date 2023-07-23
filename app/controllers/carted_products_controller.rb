@@ -4,8 +4,8 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: params[:status],
-      order_id: params[:order_id],
+      status: "carted",
+      order_id: nil,
     )
 
     render template: "carted_products/show"
