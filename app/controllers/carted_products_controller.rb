@@ -15,4 +15,12 @@ class CartedProductsController < ApplicationController
     @carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
     render template: "carted_products/index"
   end
+
+  def destroy
+    carted_product = CartedProduct.find_by(id: params[:id])
+
+    carted_product.destroy
+
+    render json: { message: "Carted product destroyed" }
+  end
 end
