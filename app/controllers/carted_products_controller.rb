@@ -16,11 +16,19 @@ class CartedProductsController < ApplicationController
     render template: "carted_products/index"
   end
 
+  # def destroy
+  #   carted_product = CartedProduct.find_by(id: params[:id])
+
+  #   carted_product.destroy
+
+  #   render json: { message: "Carted product destroyed" }
+  # end
+
   def destroy
     carted_product = CartedProduct.find_by(id: params[:id])
 
-    carted_product.destroy
+    carted_product.update(status: "removed")
 
-    render json: { message: "Carted product destroyed" }
+    render json: { message: "Carted product removed from cart" }
   end
 end

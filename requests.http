@@ -106,3 +106,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyMzUxM
 DELETE http://localhost:3000/carted_products/5.json
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyODE2NDR9.RD9RUsw3vGwX0ynMdNZgoMzut84zmUlnLrb4BnLCehI
+
+###
+DELETE http://localhost:3000/carted_products/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyODE2NDR9.RD9RUsw3vGwX0ynMdNZgoMzut84zmUlnLrb4BnLCehI
