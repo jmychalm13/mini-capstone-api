@@ -78,13 +78,7 @@ Content-Type: application/json
 
 ###
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2ODk5ODQ0MTV9.wm-nWYrtUOQpLh36pMTlOpjJ_TnkVxP6MiQ_CoWqAAM
-Content-Type: application/json
-
-{
-  "product_id": 7,
-  "quantity": 2
-}
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTAyMzY3MTd9.6WCOmcsIxPte9WottRTROLIXzkaxfOn5Oxly-raZ9IU
 
 ### index
 GET http://localhost:3000/orders.json

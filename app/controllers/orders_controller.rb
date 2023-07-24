@@ -1,20 +1,24 @@
 class OrdersController < ApplicationController
   def create
     if current_user
-      product = Product.find_by(id: params[:product_id])
+      carted_products = CartedProduct.where(user_id: current_user.id, status: "carted")
       # pp product.price
-      subtotal = params[:quantity].to_i * product.price
+      subtotal = 0
+      for carted_product in carted_products
+        price = carted_product.product.price
+        quantity = carted_product.quantity
+        subtotal += (price * quantity)
+      end
       tax = subtotal * 0.09
       total = tax + subtotal
       @order = Order.create(
         user_id: current_user.id,
-        product_id: params[:product_id],
-        quantity: params[:quantity],
         subtotal: subtotal,
         tax: tax,
         total: total,
       )
       if @order.valid?
+        carted_products.update_all(status: "purchased", order_id: @order.id)
         render template: "orders/show"
       else
         # sad path -> validations did not pass
